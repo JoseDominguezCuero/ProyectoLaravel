@@ -3,22 +3,28 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\User;
 
-class UserSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seed the application's database.
      *
      * @return void
      */
     public function run()
     {
-        User::create([
-            "name"=>'Jose',
-            "email"=>'jdominguez758@misena.edu.co',
-            "password" => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',//password
-            "area_id" => '1',
+        // \App\Models\User::factory(10)->create();
+       // $this->call([
+          //  ProductSeeder::class
+      //  ]);
+        $this->call([
+          AreaSeeder::class,
+          BrandSeeder::class,
+          CategorySeeder::class,
+          ProductSeeder::class,
+          UserSeeder::class,
+          InvoiceSeeder::class,
+          InvoiceDetailSeeder::class,       
         ]);
     }
 }
