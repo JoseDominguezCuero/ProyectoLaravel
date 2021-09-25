@@ -1,0 +1,60 @@
+Pasos para la creacion de proyecto en Laravel
+ Apuntes en clase
+ 
+ Navegacion entre carpetas
+    - cd (carpeta):
+
+Creacion de proyecto y descarga Laravel
+    - composer create-project laravel/laravel inventory-app
+
+Sube y dispone de forma espontanea el servidor php en cualquier carpeta 
+(Iniciar servidor local, sin necesidad de xampp, apache)
+    - php -s localhost:8080
+
+Levantamiento de servidor
+    - cd inventory-app (Acceder a la carpeta)
+    - php artisan serve
+
+Cancelar cualquier operacion
+    - Ctrl+c+c
+
+Realizar cambios en .env (Base de datos, nombre archivo...)
+    - Cancelar operacion
+    - Levantar el servidor
+
+Instalar dependencias (Despues de descargar el proyecto)
+    - composer install
+
+php artisan make:controller ____
+php artisan make:migration
+php artisan make:model
+php artisan make:
+
+$objPersona = new Persona();
+
+Persona::id;   (Metodo static)
+Persona::get();
+
+$objPersona->id;
+$objPersona->get();
+
+Para subir bd al motor
+    - php artisan migrate
+
+Para actualizar campos
+    - php artisan migrate:refresh (Tumba bd existente, vuelve a crear) 
+    - php artisan migrate:rollback	
+
+Creacion nuevo modelo
+    - php artisan make:model Product
+
+Creacion Factory
+    - php artisan make:factory ProductFactory
+
+Creacion Seeder (Semilla, definicion de cantidad de datos)
+    - php artisan make:seeder ProductSeeder
+
+Comando para sembrar (Insertar registros a db)
+    - php artisan db:seed
+
+Seleccion multiple (Ctrl+alt+flecha)
