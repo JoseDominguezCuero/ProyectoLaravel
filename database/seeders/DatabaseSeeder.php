@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
             "name"=>'Jose',
             "email"=>'jdominguez758@misena.edu.co',
             "password" => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',//password
+            "area_id" => '1',
         ]);
     }
 }
